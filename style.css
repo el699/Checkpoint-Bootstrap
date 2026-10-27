@@ -1,0 +1,493 @@
+/* =========================
+   1. Réglages de base
+========================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f7f3f0;
+    color: #1f2937;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* =========================
+   2. En-tête et navigation
+========================= */
+header {
+    background: #fff;
+    padding: 0 4%;
+    border-radius: 12px 12px 0 0;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+    color: #1f2937;
+}
+
+.navbar .nav-link {
+    color: #1f2937;
+    font-size: 13px;
+    padding: 14px 16px;
+}
+
+.navbar .nav-link:hover {
+    color: #f97316;
+}
+
+.nav-icons {
+    font-size: 22px;
+}
+
+/* =========================
+   3. Section principale
+========================= */
+.hero {
+    display: flex;
+    align-items: center;
+    background: #f5e5d8;
+    min-height: 300px;
+    padding: 0 6%;
+    overflow: hidden;
+}
+
+.hero-texte {
+    flex: 1;
+    padding: 30px 20px 30px 0;
+}
+
+.etiquette {
+    color: #f97316;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 3vw, 46px);
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 14px;
+}
+
+.hero-texte p:not(.etiquette) {
+    max-width: 390px;
+    line-height: 1.6;
+}
+
+.bouton-orange {
+    background: #f97316;
+    color: white;
+    border: none;
+    border-radius: 22px;
+    padding: 10px 22px;
+    font-size: 13px;
+}
+
+.bouton-orange:hover {
+    background: #dc5e0d;
+    color: white;
+}
+
+.hero-image {
+    flex: 1.1;
+    height: 300px;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.promo {
+    position: absolute;
+    right: 8%;
+    top: 25%;
+    background: #f97316;
+    color: white;
+    text-align: center;
+    padding: 16px 18px;
+    border-radius: 50%;
+    transform: rotate(10deg);
+}
+
+/* =========================
+   4. Catégories et produits
+========================= */
+.section {
+    padding-top: 28px;
+    padding-bottom: 8px;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.trait {
+    width: 38px;
+    height: 3px;
+    background: #f97316;
+    margin: 0 auto 20px;
+}
+
+.categories {
+    display: flex;
+    gap: 18px;
+}
+
+.categorie {
+    flex: 1;
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.categorie img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.categorie:hover img {
+    transform: scale(1.05);
+}
+
+.categorie span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.categorie small {
+    color: #f97316;
+    margin-top: 3px;
+}
+
+.produits {
+    display: flex;
+    gap: 18px;
+}
+
+.produit {
+    flex: 1;
+    min-width: 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 8px #0000000d;
+}
+
+.produit > img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.produit-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    padding-right: 38px;
+    font-size: 12px;
+}
+
+.produit-info span {
+    color: #f97316;
+    font-weight: bold;
+}
+
+.ajouter {
+    position: absolute;
+    right: 8px;
+    bottom: 10px;
+    background: #f97316;
+    color: white;
+    border: 0;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+/* =========================
+   5. À propos
+========================= */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+.about img {
+    width: 42%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.about div {
+    flex: 1;
+}
+
+.about h2 {
+    text-align: left;
+    font-size: 22px;
+}
+
+.about p {
+    line-height: 1.6;
+}
+
+/* =========================
+   6. Page Contact
+========================= */
+.contact-page {
+    background: #fff;
+    padding: 40px 5% 50px;
+}
+
+.contact-page > h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.intro {
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+.contact-flex {
+    display: flex;
+    gap: 35px;
+}
+
+.contact-infos {
+    flex: 0.9;
+    padding-top: 10px;
+}
+
+.info-ligne {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.info-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff0e6;
+    color: #f97316;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    font-size: 21px;
+    flex-shrink: 0;
+}
+
+.info-ligne p {
+    margin: 4px 0 0;
+    color: #6b7280;
+}
+
+.formulaire {
+    flex: 1.1;
+    background: #fafafa;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    padding: 22px;
+}
+
+.formulaire h2 {
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+}
+
+.champ {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+}
+
+.champ label {
+    font-size: 12px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.champ input,
+.champ textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 13px;
+    background: white;
+}
+
+.champ textarea {
+    resize: vertical;
+}
+
+.bouton-large {
+    width: 100%;
+}
+
+/* =========================
+   7. Pied de page
+========================= */
+footer {
+    background: #1f2937;
+    color: white;
+    padding-top: 28px;
+}
+
+.footer-colonnes {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    padding-bottom: 22px;
+}
+
+.footer-colonnes > div {
+    flex: 1;
+}
+
+.footer-colonnes h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 13px;
+}
+
+.footer-colonnes p,
+.footer-colonnes a {
+    display: block;
+    color: #d1d5db;
+    font-size: 12px;
+    line-height: 1.7;
+    margin-bottom: 5px;
+}
+
+.footer-colonnes a:hover {
+    color: #f97316;
+}
+
+.reseaux {
+    font-size: 20px !important;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #374151;
+    padding: 12px;
+    color: #d1d5db;
+    font-size: 11px;
+}
+
+/* =========================
+   8. Adaptation aux écrans
+========================= */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .hero-texte {
+        width: 100%;
+        padding: 10px 0 25px;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 230px;
+    }
+
+    .categories,
+    .produits {
+        flex-wrap: wrap;
+    }
+
+    .categorie {
+        flex: 1 1 45%;
+    }
+
+    .produit {
+        flex: 1 1 45%;
+    }
+
+    .about,
+    .contact-flex {
+        flex-direction: column;
+    }
+
+    .about img {
+        width: 100%;
+    }
+
+    .footer-colonnes {
+        flex-wrap: wrap;
+    }
+
+    .footer-colonnes > div {
+        flex: 1 1 40%;
+    }
+}
+
+@media (max-width: 480px) {
+    .categorie,
+    .produit {
+        flex: 1 1 100%;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .footer-colonnes > div {
+        flex: 1 1 100%;
+    }
+
+    .section h2,
+    .about h2 {
+        font-size: 20px;
+    }
+}
